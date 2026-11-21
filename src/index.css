@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  html.dark, body.dark {
+    background-color: #0f172a;
+    color: #f8fafc;
+    color-scheme: dark;
+  }
+}
+
+/* Custom scrollbar for mobile drawers */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Pulse animations */
+@keyframes tram-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.animate-tram-pulse {
+  animation: tram-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Leaflet Custom DivIcon Resets */
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.leaflet-container {
+  background-color: #e5e7eb !important;
+}
+
+.dark .leaflet-container {
+  background-color: #181b20 !important;
+}
+
+/* Adaptive map controls and floating bottom buttons */
+.adaptive-map-controls {
+  bottom: calc(max(3.5rem, env(safe-area-inset-bottom, 0px) + 2.5rem));
+  right: calc(max(1rem, env(safe-area-inset-right, 0px) + 0.875rem));
+}
+
+.adaptive-dark-mode-btn {
+  bottom: calc(max(3.5rem, env(safe-area-inset-bottom, 0px) + 2.5rem));
+  left: calc(max(1rem, env(safe-area-inset-left, 0px) + 0.875rem));
+}
+
+@media (max-height: 520px) {
+  .adaptive-map-controls {
+    bottom: calc(max(1.5rem, env(safe-area-inset-bottom, 0px) + 1rem));
+    right: calc(max(1rem, env(safe-area-inset-right, 0px) + 0.75rem));
+  }
+  .adaptive-dark-mode-btn {
+    bottom: calc(max(1.5rem, env(safe-area-inset-bottom, 0px) + 1rem));
+    left: calc(max(1rem, env(safe-area-inset-left, 0px) + 0.75rem));
+  }
+}
+
+/* Leaflet bottom attribution refinement for safe areas and legibility */
+.leaflet-bottom {
+  padding-bottom: max(0.25rem, env(safe-area-inset-bottom, 0px));
+}
+
+.leaflet-control-attribution {
+  font-size: 9px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(4px);
+  border-radius: 6px !important;
+  margin: 0 0 6px 8px !important;
+  padding: 1px 6px !important;
+  line-height: 1.4 !important;
+}
+
+.dark .leaflet-control-attribution {
+  background: rgba(15, 23, 42, 0.85) !important;
+  color: #94a3b8 !important;
+}
+
+.dark .leaflet-control-attribution a {
+  color: #cbd5e1 !important;
+}

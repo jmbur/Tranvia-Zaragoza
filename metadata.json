@@ -1,0 +1,11 @@
+{
+  "name": "Tranvía Zaragoza Live",
+  "description": "Mapa en directo del Tranvía de Zaragoza: posición de convoyes, tiempos de espera por parada, incidencias del servicio y notificaciones push de llegada. SERVICIO NO OFICIAL.",
+  "requestFramePermissions": [
+    "geolocation",
+    "notifications"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

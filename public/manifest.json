@@ -1,0 +1,44 @@
+{
+  "id": "/?v=2026",
+  "name": "Tranvía Zaragoza",
+  "short_name": "Tranvía ZGZ",
+  "description": "Mapa en directo, tiempos de espera y avisos del Tranvía de Zaragoza",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#8ea6be",
+  "theme_color": "#dc2626",
+  "icons": [
+    {
+      "src": "/tram-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/tram-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/tram-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
